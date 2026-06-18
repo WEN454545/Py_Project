@@ -9,6 +9,7 @@ from PySide6.QtGui import (
     QColor,
     QPainter,
     QTextFormat,
+    QTextOption,
     QKeyEvent,
 )
 
@@ -73,7 +74,7 @@ class EditorWidget(QPlainTextEdit):
         """)
 
         self.setLineWrapMode(QPlainTextEdit.WidgetWidth)
-        self.setWordWrapMode(QTextEdit.WrapMode.WrapAtWordBoundaryOrAnywhere)
+        self.setWordWrapMode(QTextOption.WrapMode.WrapAtWordBoundaryOrAnywhere)
 
         # Attach syntax highlighter
         self._highlighter = MarkdownSyntaxHighlighter(self.document())

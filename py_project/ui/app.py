@@ -13,14 +13,14 @@ from .main_window import MainWindow
 
 def run() -> int:
     """Create QApplication and show the main window."""
+    # High-DPI support — must be set before creating QApplication
+    QApplication.setHighDpiScaleFactorRoundingPolicy(
+        Qt.HighDpiScaleFactorRoundingPolicy.PassThrough
+    )
+
     app = QApplication(sys.argv)
     app.setApplicationName(APP_NAME)
     app.setOrganizationName("PyKnowledge")
-
-    # High-DPI support
-    app.setHighDpiScaleFactorRoundingPolicy(
-        Qt.HighDpiScaleFactorRoundingPolicy.PassThrough
-    )
 
     window = MainWindow()
     window.resize(WINDOW_WIDTH, WINDOW_HEIGHT)
