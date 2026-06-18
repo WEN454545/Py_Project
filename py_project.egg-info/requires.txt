@@ -1,0 +1,15 @@
+PySide6>=6.6
+markdown-it-py>=3.0
+mdit-py-plugins>=0.4
+PyYAML>=6.0
+Pygments>=2.17
+Pillow>=10.0
+diff-match-patch>=20230430
+lxml>=5.0
+python-slugify>=8.0
+bleach>=6.0
+
+[dev]
+pytest>=8.0
+pytest-qt>=4.4
+coverage>=7.0
